@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getter Setter</title>
+    </head>
+    <body>
+        <header>
+            <h1>Getter Setter</h1>
+        </header>
+        <section>
+            <script "text/javascript">
+                var attendance = {
+                    _list: [],
+                    set addName(name) {
+                        this._list.push(name)
+                    },
+                    get list() {
+                        return this._list.join(', ')
+                    }
+                }
+
+                attendance.addName = 'Juan'
+                attendance.addName = 'Luis'
+                console.log(attendance._list)
+                console.log(attendance.list)
+            </script>
+            <script type="text/javascript">
+                class Hike {
+                    #distance
+                    #pace
+
+                    #calcLength = () => {
+                        return this.#distance/this.#pace
+                    }
+
+                    constructor(distance, pace) {
+                        this.#distance = distance
+                        this.#pace = pace
+                    }
+
+                    
+
+                    get lengthInHours() {
+                        return `${this.#calcLength()} hours`
+                    }
+                }
+
+                const mtTallac = new Hike(10,2)
+                console.log(mtTallac.lengthInHours)
+            </script>
+        </section>
+    </body>
+</html>
