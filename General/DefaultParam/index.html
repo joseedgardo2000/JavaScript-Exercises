@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Default Param</title>
+    </head>
+    <body>
+        <header>
+            <h1>Default Params</h1>
+        </header>
+        <body>
+            <script type="text/javascript">
+                function sum(a=10,b=20) {
+                    return a + b
+                }
+
+                function haveFun(activity="hiking", time=3) {
+                    return `Today I will go ${activity} for ${time} hours.`
+                }
+
+                console.log(sum())
+                console.log(sum(100,200))
+                console.log(haveFun())
+                console.log(haveFun('dancing', 5))
+            </script>
+        </body>
+    </body>
+</html>

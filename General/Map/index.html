@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map</title>
+    </head>
+    <body>
+        <header>
+            <h1>Map</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                var course = new Map()
+                course.set('react', {description:'ui'})
+                course.set('jenkings', {description:'testing'})
+                var employee = new Map()
+                employee.set('L01', 'Juan')
+                employee.set('L05', 'Laura')
+                employee.set('L03', 'Rolando')
+
+                console.log(course)
+                console.log(employee)
+                console.log(course.jenkings)
+                console.log(course.get('jenkings'))
+                console.log(employee.get('L03'))
+
+                var details = new Map([
+                        [new Date(), 'today'],
+                        ['items', [1,2,3]]
+                    ])
+
+                console.log(details)
+                console.log(details.get('items'))
+
+                details.forEach(
+                    function(item, b) {
+                        console.log(b+ ' >> ' + item)
+                    }                    
+                )
+
+                details.forEach(
+                    function(item) {
+                        console.log(' >> ' + item)
+                    }                    
+                )
+
+            </script>
+        </section>
+    </body>
+</html>

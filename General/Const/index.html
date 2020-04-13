@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Const</title>
+    </head>
+    <body>
+        <header>
+            <h1>Const</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                const birthYear = 1975
+                var currentYear = (new Date()).getFullYear()
+                console.log("birthYear: " + birthYear)
+                console.log("currentYear: " + currentYear)
+                var age = currentYear - birthYear
+                console.log("Age: " + age)
+                birthYear = 1986 //Must produce error
+            </script>
+        </section>
+    </body>
+</html>

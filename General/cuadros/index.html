@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <style type="text/css">
+            section > div {
+                height: 50px;
+                width: 50px;
+                background-color: red;
+                float: left;
+                margin: 3px;
+                cursor:pointer;
+            }
+        </style>
+        <TITLE>Cuadros</TITLE>
+        <SCRIPT type="text/javascript">
+            function cuadros() {
+                for(let i=0; i<45; i++) {
+                    var div = document.createElement('div')
+                    div.textContent = i
+                    div.onclick = function() {
+                        alert("You clicked on the box #" + i)
+                    }
+                    document.getElementsByTagName('section')[0].appendChild(div)
+                }
+            } 
+        </SCRIPT> 
+    </HEAD>
+    <BODY onload="cuadros()">
+        <header>
+            <H1>Cuadros</H1>
+        </header>
+        <section></section>
+    </BODY>
+</HTML>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array into Array</title>
+    </head>
+    <body>
+        <header>
+            <h1>Array into Array</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                var cats = ["Siamese", "Egyptian", "Persian"]
+                var dogs = ["Bulldog", "Pug", "Akita"]
+                var animals = ["Pig", "Elephant", cats, "Ant", "Snake", dogs, "Shark"]
+                var animals02 = ["Pig", "Elephant", ...cats, "Ant", "Snake", ...dogs, "Shark"]
+                console.log(cats)
+                console.log(dogs)
+                console.log(animals)
+                console.log(animals02)
+            </script>
+        </section>
+    </body>
+</html>

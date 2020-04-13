@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Async Wait</title>
+    </head>
+    <body>
+        <header>
+            <h1>Async Wait</h1>
+        </header>
+        <section>
+            <script "text/javascript">
+                const delay = seconds => {
+                    return new Promise(
+                        resolve => setTimeout(resolve, seconds*1000)
+                    )
+                }
+                const countToFive = async() => {
+                    console.log("Zero seconds")
+                    await delay(1)
+                    console.log("One seconds")
+                    await delay(1)
+                    console.log("Two seconds")
+                    await delay(3)
+                    console.log("Five seconds")
+                }         
+
+                countToFive()
+
+                const countToFive02 = () => {
+                    console.log("Zero seconds")
+                    delay(1)
+                    console.log("One seconds")
+                    delay(1)
+                    console.log("Two seconds")
+                    delay(3)
+                    console.log("Five seconds")
+                }
+                
+                countToFive02()
+            </script>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loading Fetch</title>
+    </head>
+    <body>
+        <header>
+            <h1>Loading Fetch</h1>
+        </header>
+        <section>
+            <script "text/javascript">
+
+                const getPeopleInSpace = () =>
+                    fetch('http://api.open-notify.org/astros.json')
+                        .then(res=>res.json())
+                getPeopleInSpace().then(console.log)  
+
+                fetch('http://api.open-notify.org/astros.json')
+                     .then(res=>res.json())
+                     .then(console.log)
+
+                const spaceNames = () =>
+                    getPeopleInSpace()
+                        .then(json => json.people)
+                        .then(people => people.map(p=>p.name))
+                        .then(names => names.join(', '))
+
+                spaceNames()
+                    .then(console.log)
+
+            </script>
+        </section>
+    </body>
+</html>

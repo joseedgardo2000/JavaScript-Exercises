@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Template String</title>
+        <script>
+            function printLog(message) {
+                console.log(`This is the message: ${message}`)
+            }
+
+            function sendToLog() {
+                var txtMessage = document.getElementById("txtMessage")
+                var msg = txtMessage.value
+                printLog(msg)
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Template String</h1>
+        </header>
+        <body>
+            <textarea id="txtMessage" rows="4" cols="50"></textarea>
+            <button type="button" onclick="sendToLog()">Send to log</button>
+        </body>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Set</title>
+    </head>
+    <body>
+        <header>
+            <h1>Set</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                
+                var books = new Set()
+                books.add('Bible')
+                books.add('1984')
+                     .add('The War of Worlds')
+                     .add('Coran')
+
+                console.log(books)
+                console.log('How many books?', books.size)
+                console.log('Has Bible? ', books.has('Bible'))
+                console.log('Has Drakula? ', books.has('Drakula'))
+
+                var data = [4,3,6,2,7,4,5,4,1,8]
+                var setData = new Set(data)
+
+                console.log('data.lenght: ', setData.size)
+                console.log('data: ', data)
+                console.log('setData: ', setData)
+
+            </script>
+        </section>
+    </body>
+</html>

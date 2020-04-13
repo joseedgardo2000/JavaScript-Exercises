@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Iterators</title>
+    </head>
+    <body>
+        <header>
+            <h1>Iterators</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                
+                function tableReady(arr) {
+                    var nextIndex = 0;
+                    return {
+                        next() {
+                            if(nextIndex<arr.length) {
+                                return {value: arr.shift(), done:false}
+                            } else {
+                                return {done: true}
+                            }
+                        }
+                    }
+                }
+
+                function a() { 
+                    var message = "Tito tito capotito sube al cielo" 
+                                  + " y pega un grito"
+                    console.log(typeof message)
+                    console.log(typeof message[Symbol.iterator])
+                    var iterateIt = message[Symbol.iterator]()
+                    console.log(iterateIt.next())
+                    console.log(iterateIt.next())
+                    console.log(iterateIt.next())
+                    console.log(iterateIt.next())
+                }
+
+                function b() {
+                    var wList = ["Juan", "Pedro", "Luis", "Ana"]
+                    var wListIt = tableReady(wList)
+
+                    console.log(`${wListIt.next().value}, your table is ready`)
+                    console.log(`${wListIt.next().value}, your table is ready`)
+                    console.log(`${wListIt.next().value}, your table is ready`)
+                    console.log(`${wListIt.next().value}, your table is ready`)
+                }
+
+                a()
+                b()
+            </script>
+        </section>
+    </body>
+</html>

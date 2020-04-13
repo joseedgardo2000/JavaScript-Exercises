@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Literal</title>
+    </head>
+    <body>
+        <header>
+            <h1>Object Literal</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                var cat = {
+                    meow: function(times) {
+                        console.log(Array(times).join("meow"))
+                    },
+                    purr: function(times) {
+                        console.log(Array(times).join("purr"))
+                    },
+                    snore: function(times) {
+                        console.log(Array(times).join("snore"))
+                    }
+                }
+
+                var cat02 = {
+                    meow(times) {
+                        console.log("meow".repeat(times))
+                    },
+                    purr(times) {
+                        console.log("purr".repeat(times))
+                    },
+                    snore(times) {
+                        console.log("snore".repeat(times))
+                    }
+                }
+
+                cat.meow(4)
+                cat.purr(3)
+                cat.snore(6)
+                cat02.meow(4)
+                cat02.purr(3)
+                cat02.snore(6)
+            </script>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promise</title>
+    </head>
+    <body>
+        <header>
+            <h1>Promise</h1>
+        </header>
+        <section>
+            <script "text/javascript">
+                const delay = seconds => {
+                    return new Promise(
+                        resolve => {
+                            setTimeout(
+                                () => resolve(`${seconds} second delay is up`),
+                                seconds * 1000
+                            )
+                        }
+                    )
+                }
+
+                console.log("Zero seconds")
+                delay(2).then(msg=>console.log(msg))
+                delay(4).then(msg=>console.log(msg))
+                delay(4).then(msg=>msg.toUpperCase())
+                        .then(msg=>`${msg}!!!!!`)
+                        .then(msg=>console.log(msg))
+
+                const delay02 = seconds => {
+                    return  new Promise(
+                        (resolve, reject) => {
+                            if(typeof seconds !== 'number') {
+                                reject(new Error('El argumento seconds debe ser un número'))
+                            }
+                            setTimeout(
+                                ()=>resolve(`${seconds} second delay is up`),
+                                seconds * 1000
+                            )
+                        }
+                    )
+                }
+                delay02(2).then(msg=>console.log(msg))
+                delay02(4).then(msg=>console.log(msg))
+                delay02("4").then(msg=>console.log(msg))
+            </script>
+        </section>
+    </body>
+</html>

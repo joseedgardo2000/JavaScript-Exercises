@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DestAssign</title>
+    </head>
+    <body>
+        <header>
+            <h1>DestAssign</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                function first() {
+                    var cities = ['Córdoba', 'Orizaba', 'Puebla', 'Veracruz']
+                    var [a,b,,d] = cities
+                    console.log("------------ first ------------")
+                    console.log(a)
+                    console.log(b)
+                    console.log(d)
+                    console.log(cities[0])
+                    console.log(cities[3])
+                }
+                
+                function second() {
+                    var sandwich = {
+                        title: 'Pepito',
+                        price: 7,
+                        description: "Mexican favourite sandwich",
+                        ingredients: ["beans", "beef", "tomato", "jalapeño"], 
+                    };
+
+                    var {title,price} = {
+                        title: 'Pepito',
+                        price: 7,
+                        description: "Mexican favourite sandwich",
+                        ingredients: ["beans", "beef", "tomato", "jalapeño"], 
+                    };
+
+                    var {description,ingredients} = sandwich
+
+                    console.log("----------- Second -----------")
+                    console.log(sandwich.title)
+                    console.log(sandwich.price)
+                    console.log(title)
+                    console.log(price)
+                    console.log(description)
+                    console.log(ingredients)
+                }
+
+                function third_b({destination, activity}) {
+                    return `Come to ${destination} and do some ${activity}`
+                }
+
+                function third() {
+                    var vacation = {
+                        destination: "Chile",
+                        travelers: 2,
+                        activity: "skiing",
+                        cost:4000
+                    }
+                    console.log("----------- Third -----------")
+                    console.log(third_b(vacation))
+                }
+
+                first()
+                second()
+                third()
+            </script>
+        </section>
+
+    </body>
+</html>

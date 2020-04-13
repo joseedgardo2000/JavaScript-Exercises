@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Template String 02</title>
+    </head>
+    <body>
+        <header>
+            <h1>Template String 02</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                function createEmail(firstName, purchasePrice) {
+                    var shipping = 5.95
+                    console.log(
+                        `
+                        Hi ${firstName}, Thanks for buying from us!
+                            Total: $${purchasePrice}
+                            Shipping: $${shipping}
+                            Grand Total: $${purchasePrice + shipping}
+                        `
+                    )
+                }
+
+                createEmail("Pancho", "100")
+            </script>
+        </section>
+    </body>
+</html>

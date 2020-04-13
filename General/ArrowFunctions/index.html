@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrow Functions</title>
+    </head>
+    <body>
+        <header>
+            <h1>Arrow Functions</h1>
+        </header>
+        <section>
+            <script type="text/javascript">
+                var students = ['Juan', 'Pedro', 'Luis']
+                var studentsList01 = function(students) {
+                    console.log(students)
+                }
+
+                var studentsList02 = (students) => console.log(students)
+                var studentsList03 = students => console.log(students)
+        
+                studentsList01(students)
+                studentsList02(students)
+                studentsList03(students)
+            </script>
+        </section>
+    </body>
+</html>

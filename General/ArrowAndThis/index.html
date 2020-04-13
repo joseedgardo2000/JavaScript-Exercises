@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrow and This</title>
+    </head>
+    <body>
+        <header>
+            <h1>Arrow and This</h1>
+        </header>
+        <body>
+            <script type="text/javascript">
+                var person = {
+                    first:"Doug",
+                    actions: ["bike", "hike", "ski", "surf"],
+                    printActions() {
+                        this.actions.forEach(
+                            action => console.log(this.first + " likes to " +  action)
+                        )
+                    }
+                }
+                person.printActions()
+            </script>
+        </body>
+    </body>
+</html>

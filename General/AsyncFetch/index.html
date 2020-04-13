@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Async Fetch</title>
+    </head>
+    <body>
+        <header>
+            <h1>Async Fetch</h1>
+        </header>
+        <section>
+            <script "text/javascript">
+                const githubRequest = async(loginName) => {
+                    try{
+                        var response = await 
+                            fetch(`https://api.github.com/users/${loginName}/followers`)
+                        var json = await response.json()
+                        var followerList = json.map(user => user.login)
+                        console.log(loginName)
+                        console.log(followerList) 
+                    } catch (e) {
+                        console.log("La información no puede ser cargada", e)
+                    }
+                }
+                githubRequest('joseedgardo2000')
+                githubRequest('eveporcello')
+            </script>
+            <script "text/javascript">
+                (async(loginName) => {
+                    try{
+                        var response = await 
+                            fetch(`https://api.github.com/users/${loginName}/followers`)
+                        var json = await response.json()
+                        var followerList = json.map(user => user.login)
+                        console.log(loginName)
+                        console.log(followerList) 
+                    } catch (e) {
+                        console.log("La información no puede ser cargada", e)
+                    }
+                })('joseedgardo2000')
+            </script>
+        </section>
+    </body>
+</html>
